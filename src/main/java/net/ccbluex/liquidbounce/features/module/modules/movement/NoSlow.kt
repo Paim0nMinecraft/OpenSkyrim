@@ -140,10 +140,7 @@ class NoSlow : Module() {
 
             "hyt-vanilla" -> {
                 val item = mc.thePlayer!!.heldItem?.item
-                if (event.eventState == EventState.PRE && classProvider.isItemFood(item) || classProvider.isItemPotion(
-                        item
-                    ) || classProvider.isItemBucketMilk(item)
-                ) {
+                if (event.eventState == EventState.PRE && classProvider.isItemFood(item) || classProvider.isItemPotion(item) || classProvider.isItemBucketMilk(item)) {
                     val curSlot = mc.thePlayer!!.inventory.currentItem
                     val spoof = if (curSlot == 0) 1 else -1
                     PacketUtils.sendPacketNoEvent(CPacketHeldItemChange(curSlot + spoof))
