@@ -1,4 +1,4 @@
-# Skyrim
+# OpenSkyrim
 A free mixin-based injection hacked-client using Minecraft Forge based on LiquidBounce for HuaYuTing server, supporting version 1.12.2.
 
 
